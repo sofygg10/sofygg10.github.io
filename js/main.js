@@ -118,6 +118,11 @@
       'stack.cat.vcs': 'Control de versiones',
       'stack.cat.design': 'Diseño',
       'stack.react': 'React (fund.)',
+      'stack.promptEng': 'Prompt Engineering',
+      'stack.aiAgents': 'Agentes de IA',
+      'stack.llmApps': 'Aplicaciones LLM',
+      'stack.dataAnalysis': 'Análisis de datos',
+      'stack.jsonProc': 'Procesamiento JSON',
 
       // PROJECTS
       'projects.num': '04 / Proyectos',
@@ -372,6 +377,11 @@
       'stack.cat.vcs': 'Version control',
       'stack.cat.design': 'Design',
       'stack.react': 'React (basics)',
+      'stack.promptEng': 'Prompt Engineering',
+      'stack.aiAgents': 'AI Agents',
+      'stack.llmApps': 'LLM Applications',
+      'stack.dataAnalysis': 'Data Analysis',
+      'stack.jsonProc': 'JSON Processing',
 
       // PROJECTS
       'projects.num': '04 / Projects',
