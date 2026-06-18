@@ -7,15 +7,15 @@
   <!-- ============================================================
        SEO META TAGS
        ============================================================ -->
-  <title>Sofía Gonzalez · WordPress Developer · n8n · IA · SEO Técnico</title>
-  <meta name="description" content="Portafolio profesional de Sofía Gonzalez García — Desarrolladora Web WordPress, automatización de procesos con n8n y Python, e implementación de IA y SEO técnico." />
+  <title data-i18n="meta.title">Sofía Gonzalez · WordPress Developer · n8n · IA · SEO Técnico</title>
+  <meta name="description" data-i18n-content="meta.description" content="Portafolio profesional de Sofía Gonzalez García — Desarrolladora Web WordPress, automatización de procesos con n8n y Python, e implementación de IA y SEO técnico." />
   <meta name="author" content="Sofía Gonzalez García" />
   <meta name="keywords" content="Sofía Gonzalez, WordPress, Crocoblock, n8n, Python, IA, SEO, cPanel, DNS, Manizales, Colombia, Portafolio" />
   <meta name="theme-color" content="#211D1B" />
 
   <!-- Open Graph para previsualización en redes -->
-  <meta property="og:title" content="Sofía Gonzalez — WordPress · Automatización · IA" />
-  <meta property="og:description" content="Soluciones digitales con automatización, IA y experiencia de usuario." />
+  <meta property="og:title" data-i18n-content="meta.og.title" content="Sofía Gonzalez — WordPress · Automatización · IA" />
+  <meta property="og:description" data-i18n-content="meta.og.description" content="Soluciones digitales con automatización, IA y experiencia de usuario." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/img/profile.png" />
 
@@ -39,7 +39,7 @@
        NAVEGACIÓN PRINCIPAL
        ============================================================ -->
   <header class="nav" id="nav">
-    <a href="#hero" class="nav__brand" aria-label="Inicio · Sofía Gonzalez">
+    <a href="#hero" class="nav__brand" data-i18n-aria-label="nav.aria.home" aria-label="Inicio · Sofía Gonzalez">
       <!-- Logo personal · arco con punto rosa (homenaje al manual Aura) -->
       <svg class="nav__logo" width="32" height="32" viewBox="0 0 58 58" fill="none" aria-hidden="true">
         <path d="M10 48 C10 22 18 11 29 11 C40 11 48 22 48 48" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
@@ -52,16 +52,23 @@
       </span>
     </a>
 
-    <nav class="nav__menu" id="navMenu" aria-label="Navegación principal">
-      <a href="#about"><span class="nav__num">01</span> Sobre mí</a>
-      <a href="#services"><span class="nav__num">02</span> Servicios</a>
-      <a href="#stack"><span class="nav__num">03</span> Stack</a>
-      <a href="#projects"><span class="nav__num">04</span> Proyectos</a>
-      <a href="#journey"><span class="nav__num">05</span> Trayectoria</a>
-      <a href="#contact" class="nav__cta">Contacto</a>
+    <nav class="nav__menu" id="navMenu" data-i18n-aria-label="nav.aria.menu" aria-label="Navegación principal">
+      <a href="#about"><span class="nav__num">01</span> <span data-i18n="nav.about">Sobre mí</span></a>
+      <a href="#services"><span class="nav__num">02</span> <span data-i18n="nav.services">Servicios</span></a>
+      <a href="#stack"><span class="nav__num">03</span> <span data-i18n="nav.stack">Stack</span></a>
+      <a href="#projects"><span class="nav__num">04</span> <span data-i18n="nav.projects">Proyectos</span></a>
+      <a href="#journey"><span class="nav__num">05</span> <span data-i18n="nav.journey">Trayectoria</span></a>
+      <a href="#contact" class="nav__cta" data-i18n="nav.contact">Contacto</a>
+
+      <!-- Selector de idioma -->
+      <div class="nav__lang" role="group" data-i18n-aria-label="nav.aria.lang" aria-label="Cambiar idioma">
+        <button type="button" class="nav__lang-btn is-active" data-lang="es" aria-pressed="true">ES</button>
+        <span class="nav__lang-sep" aria-hidden="true">/</span>
+        <button type="button" class="nav__lang-btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
     </nav>
 
-    <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+    <button class="nav__toggle" id="navToggle" data-i18n-aria-label="nav.aria.openMenu" aria-label="Abrir menú" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </header>
@@ -76,11 +83,11 @@
         <div class="hero__copy reveal">
           <p class="eyebrow">
             <span class="eyebrow__dot"></span>
-            <span>Portafolio · 2026</span>
+            <span data-i18n="hero.eyebrow">Portafolio · 2026</span>
           </p>
 
           <h1 class="hero__title">
-            <span class="hero__hello">Hola, soy</span>
+            <span class="hero__hello" data-i18n="hero.hello">Hola, soy</span>
             <span class="hero__name">Sofía Gonzalez</span>
           </h1>
 
@@ -91,7 +98,7 @@
             <span class="hero__role-cursor" aria-hidden="true">|</span>
           </p>
 
-          <p class="hero__pitch">
+          <p class="hero__pitch" data-i18n-html="hero.pitch">
             Diseño soluciones digitales que combinan
             <em>automatización con n8n</em>, <em>inteligencia artificial</em> y
             <em>WordPress profesional</em> para acelerar negocios.
@@ -99,17 +106,17 @@
 
           <div class="hero__cta">
             <a href="#projects" class="btn btn--primary">
-              Ver proyectos
+              <span data-i18n="hero.cta.projects">Ver proyectos</span>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
-            <a href="#contact" class="btn btn--ghost">Contactarme</a>
+            <a href="#contact" class="btn btn--ghost" data-i18n="hero.cta.contact">Contactarme</a>
           </div>
 
           <!-- KPIs sutiles inspirados en el manual de marca -->
-          <ul class="hero__kpis" aria-label="Indicadores">
-            <li><span class="kpi__k">Base</span><span class="kpi__v">Manizales · CO</span></li>
-            <li><span class="kpi__k">Stack</span><span class="kpi__v">WP · n8n · Py</span></li>
-            <li><span class="kpi__k">Status</span><span class="kpi__v"><span class="dot dot--live"></span> abierta a oportunidades</span></li>
+          <ul class="hero__kpis" data-i18n-aria-label="hero.kpi.indicators" aria-label="Indicadores">
+            <li><span class="kpi__k" data-i18n="hero.kpi.base.k">Base</span><span class="kpi__v" data-i18n="hero.kpi.base.v">Manizales · CO</span></li>
+            <li><span class="kpi__k" data-i18n="hero.kpi.stack.k">Stack</span><span class="kpi__v" data-i18n="hero.kpi.stack.v">WP · n8n · Py</span></li>
+            <li><span class="kpi__k" data-i18n="hero.kpi.status.k">Status</span><span class="kpi__v"><span class="dot dot--live"></span> <span data-i18n="hero.kpi.status.v">abierta a oportunidades</span></span></li>
           </ul>
         </div>
 
@@ -120,6 +127,7 @@
             <div class="photo-frame__deco" aria-hidden="true"></div>
             <img
               src="assets/img/profile.png"
+              data-i18n-alt="hero.photo.alt"
               alt="Retrato profesional de Sofía Gonzalez"
               loading="eager"
               decoding="async"
@@ -139,8 +147,8 @@
       <!-- Marquee técnico, evoca terminal / monospace del manual -->
       <div class="marquee" aria-hidden="true">
         <div class="marquee__track">
-          <span>WordPress</span><span>·</span><span>Crocoblock</span><span>·</span><span>n8n</span><span>·</span><span>Python</span><span>·</span><span>OpenAI</span><span>·</span><span>SEO Técnico</span><span>·</span><span>cPanel</span><span>·</span><span>DNS</span><span>·</span><span>REST API</span><span>·</span><span>JavaScript</span><span>·</span><span>Data</span><span>·</span>
-          <span>WordPress</span><span>·</span><span>Crocoblock</span><span>·</span><span>n8n</span><span>·</span><span>Python</span><span>·</span><span>OpenAI</span><span>·</span><span>SEO Técnico</span><span>·</span><span>cPanel</span><span>·</span><span>DNS</span><span>·</span><span>REST API</span><span>·</span><span>JavaScript</span><span>·</span><span>Data</span><span>·</span>
+          <span>WordPress</span><span>·</span><span>Crocoblock</span><span>·</span><span>n8n</span><span>·</span><span>Python</span><span>·</span><span>OpenAI</span><span>·</span><span data-i18n="marquee.seo">SEO Técnico</span><span>·</span><span>cPanel</span><span>·</span><span>DNS</span><span>·</span><span>REST API</span><span>·</span><span>JavaScript</span><span>·</span><span>Data</span><span>·</span>
+          <span>WordPress</span><span>·</span><span>Crocoblock</span><span>·</span><span>n8n</span><span>·</span><span>Python</span><span>·</span><span>OpenAI</span><span>·</span><span data-i18n="marquee.seo">SEO Técnico</span><span>·</span><span>cPanel</span><span>·</span><span>DNS</span><span>·</span><span>REST API</span><span>·</span><span>JavaScript</span><span>·</span><span>Data</span><span>·</span>
         </div>
       </div>
     </section>
@@ -151,13 +159,13 @@
          ============================================================ -->
     <section class="section" id="about">
       <header class="section__head reveal">
-        <span class="section__num">01 / Sobre mí</span>
-        <h2 class="section__title">De la analítica a la automatización inteligente.</h2>
+        <span class="section__num" data-i18n="about.num">01 / Sobre mí</span>
+        <h2 class="section__title" data-i18n="about.title">De la analítica a la automatización inteligente.</h2>
       </header>
 
       <div class="about reveal">
         <div class="about__lead">
-          <p>
+          <p data-i18n-html="about.lead">
             Soy <strong>Tecnóloga en Análisis y Desarrollo de Sistemas</strong>
             y estudiante de <strong>Ingeniería en Sistemas y Telecomunicaciones</strong>
             (octavo semestre, Universidad de Manizales). Construyo sitios
@@ -168,8 +176,8 @@
 
         <div class="about__cols">
           <div class="about__card">
-            <span class="about__chip">Historia</span>
-            <p>
+            <span class="about__chip" data-i18n="about.history.chip">Historia</span>
+            <p data-i18n-html="about.history.body">
               Empecé optimizando contenido y posicionamiento SEO en
               <strong>Creative Studios SAS</strong>. Esa raíz analítica me llevó al
               frontend y a WordPress; en <strong>OrbidI</strong> implementé
@@ -180,38 +188,38 @@
           </div>
 
           <div class="about__card">
-            <span class="about__chip">Experiencia</span>
+            <span class="about__chip" data-i18n="about.experience.chip">Experiencia</span>
             <ul class="about__list">
-              <li>WordPress + Crocoblock en producción</li>
-              <li>cPanel, migraciones y configuración de DNS</li>
-              <li>Automatización de procesos con n8n</li>
-              <li>Integración de APIs e IA generativa</li>
-              <li>SEO técnico: Screaming Frog, Ahrefs, Semrush</li>
-              <li>Programación en Python y JavaScript</li>
-              <li>Inglés nivel B1 (intermedio)</li>
+              <li data-i18n="about.experience.1">WordPress + Crocoblock en producción</li>
+              <li data-i18n="about.experience.2">cPanel, migraciones y configuración de DNS</li>
+              <li data-i18n="about.experience.3">Automatización de procesos con n8n</li>
+              <li data-i18n="about.experience.4">Integración de APIs e IA generativa</li>
+              <li data-i18n="about.experience.5">SEO técnico: Screaming Frog, Ahrefs, Semrush</li>
+              <li data-i18n="about.experience.6">Programación en Python y JavaScript</li>
+              <li data-i18n="about.experience.7">Inglés nivel B1 (intermedio)</li>
             </ul>
           </div>
 
           <div class="about__card">
-            <span class="about__chip">Objetivos</span>
+            <span class="about__chip" data-i18n="about.goals.chip">Objetivos</span>
             <ul class="about__list">
-              <li>Crecer como desarrolladora de soluciones digitales</li>
-              <li>Liderar implementaciones de IA en negocios reales</li>
-              <li>Profundizar en Data &amp; Software Engineering</li>
-              <li>Construir productos SaaS con automatización</li>
+              <li data-i18n="about.goals.1">Crecer como desarrolladora de soluciones digitales</li>
+              <li data-i18n="about.goals.2">Liderar implementaciones de IA en negocios reales</li>
+              <li data-i18n-html="about.goals.3">Profundizar en Data &amp; Software Engineering</li>
+              <li data-i18n="about.goals.4">Construir productos SaaS con automatización</li>
             </ul>
           </div>
         </div>
 
         <!-- Traits / pillars de marca -->
         <div class="traits">
-          <span>aprendizaje constante</span>
-          <span>resolución de problemas</span>
-          <span>comunicación efectiva</span>
-          <span>pensamiento analítico</span>
-          <span>creatividad</span>
-          <span>trabajo en equipo</span>
-          <span>innovación tecnológica</span>
+          <span data-i18n="traits.1">aprendizaje constante</span>
+          <span data-i18n="traits.2">resolución de problemas</span>
+          <span data-i18n="traits.3">comunicación efectiva</span>
+          <span data-i18n="traits.4">pensamiento analítico</span>
+          <span data-i18n="traits.5">creatividad</span>
+          <span data-i18n="traits.6">trabajo en equipo</span>
+          <span data-i18n="traits.7">innovación tecnológica</span>
         </div>
       </div>
     </section>
@@ -222,9 +230,9 @@
          ============================================================ -->
     <section class="section section--alt" id="services">
       <header class="section__head reveal">
-        <span class="section__num">02 / Servicios</span>
-        <h2 class="section__title">Qué construyo para tu negocio.</h2>
-        <p class="section__lead">Tarjetas accionables, no abstracciones. Cada servicio entrega resultados medibles.</p>
+        <span class="section__num" data-i18n="services.num">02 / Servicios</span>
+        <h2 class="section__title" data-i18n="services.title">Qué construyo para tu negocio.</h2>
+        <p class="section__lead" data-i18n="services.lead">Tarjetas accionables, no abstracciones. Cada servicio entrega resultados medibles.</p>
       </header>
 
       <!-- Para agregar un servicio: copia un .service-card y cambia su contenido -->
@@ -235,44 +243,44 @@
           <div class="service-card__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M3 9h18M7 14h6" stroke="currentColor" stroke-width="1.6"/></svg>
           </div>
-          <h3>WordPress + Crocoblock</h3>
-          <p>Sitios interactivos con tipos de contenido personalizados, lógica dinámica y arquitectura escalable lista para producción.</p>
+          <h3 data-i18n="services.1.title">WordPress + Crocoblock</h3>
+          <p data-i18n="services.1.desc">Sitios interactivos con tipos de contenido personalizados, lógica dinámica y arquitectura escalable lista para producción.</p>
         </article>
 
-        <!-- 02 · n8n (real, en OrbidI) -->
+        <!-- 02 · n8n -->
         <article class="service-card reveal">
           <div class="service-card__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none"><path d="M4 6h10M4 12h16M4 18h7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="18" cy="6" r="2" stroke="currentColor" stroke-width="1.6"/><circle cx="14" cy="18" r="2" stroke="currentColor" stroke-width="1.6"/></svg>
           </div>
-          <h3>Automatización con n8n</h3>
-          <p>Flujos low-code que clasifican correos, interceptan excepciones del CMS y orquestan procesos de negocio sin fricción.</p>
+          <h3 data-i18n="services.2.title">Automatización con n8n</h3>
+          <p data-i18n="services.2.desc">Flujos low-code que clasifican correos, interceptan excepciones del CMS y orquestan procesos de negocio sin fricción.</p>
         </article>
 
-        <!-- 03 · IA aplicada (Bootcamp + Python) -->
+        <!-- 03 · IA aplicada -->
         <article class="service-card reveal">
           <div class="service-card__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none"><path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5L12 15.7 7.1 18.2 8 12.7 4 8.8l5.5-.8L12 3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
           </div>
-          <h3>IA aplicada con Python</h3>
-          <p>Integración de modelos generativos a procesos reales: contenido, clasificación, asistentes y análisis con Python.</p>
+          <h3 data-i18n="services.3.title">IA aplicada con Python</h3>
+          <p data-i18n="services.3.desc">Integración de modelos generativos a procesos reales: contenido, clasificación, asistentes y análisis con Python.</p>
         </article>
 
-        <!-- 04 · SEO técnico (Creative Studios) -->
+        <!-- 04 · SEO técnico -->
         <article class="service-card reveal">
           <div class="service-card__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="1.6"/><path d="M20 20l-4.5-4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
           </div>
-          <h3>SEO Técnico &amp; Auditorías</h3>
-          <p>Auditorías de rendimiento e indexabilidad con Screaming Frog, Ahrefs y Semrush. Schema, Core Web Vitals y arquitectura clara.</p>
+          <h3 data-i18n-html="services.4.title">SEO Técnico &amp; Auditorías</h3>
+          <p data-i18n="services.4.desc">Auditorías de rendimiento e indexabilidad con Screaming Frog, Ahrefs y Semrush. Schema, Core Web Vitals y arquitectura clara.</p>
         </article>
 
-        <!-- 05 · Hosting + cPanel + DNS + Migraciones (real, OrbidI) -->
+        <!-- 05 · Hosting + cPanel + DNS + Migraciones -->
         <article class="service-card reveal">
           <div class="service-card__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="6" rx="1.5" stroke="currentColor" stroke-width="1.6"/><rect x="3" y="14" width="18" height="6" rx="1.5" stroke="currentColor" stroke-width="1.6"/><circle cx="7" cy="7" r="1" fill="currentColor"/><circle cx="7" cy="17" r="1" fill="currentColor"/></svg>
           </div>
-          <h3>Hosting, cPanel &amp; DNS</h3>
-          <p>Gestión integral del entorno: cPanel, zonas DNS (A, CNAME, TXT) y migraciones críticas con cero pérdida de datos.</p>
+          <h3 data-i18n-html="services.5.title">Hosting, cPanel &amp; DNS</h3>
+          <p data-i18n="services.5.desc">Gestión integral del entorno: cPanel, zonas DNS (A, CNAME, TXT) y migraciones críticas con cero pérdida de datos.</p>
         </article>
 
         <!-- 06 · Optimización web -->
@@ -280,26 +288,26 @@
           <div class="service-card__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none"><path d="M3 13l4-4 4 4 6-6 4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 20h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
           </div>
-          <h3>Optimización Web</h3>
-          <p>Velocidad, estructura semántica, accesibilidad y conversión. Cada milisegundo trabajando a favor del negocio.</p>
+          <h3 data-i18n="services.6.title">Optimización Web</h3>
+          <p data-i18n="services.6.desc">Velocidad, estructura semántica, accesibilidad y conversión. Cada milisegundo trabajando a favor del negocio.</p>
         </article>
 
-        <!-- 07 · Integración de APIs (real) -->
+        <!-- 07 · Integración de APIs -->
         <article class="service-card reveal">
           <div class="service-card__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none"><path d="M9 7l-5 5 5 5M15 7l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
-          <h3>Integración de APIs</h3>
-          <p>Conecto WordPress, n8n, CRMs y modelos de IA con APIs REST claras, seguras y bien documentadas.</p>
+          <h3 data-i18n="services.7.title">Integración de APIs</h3>
+          <p data-i18n="services.7.desc">Conecto WordPress, n8n, CRMs y modelos de IA con APIs REST claras, seguras y bien documentadas.</p>
         </article>
 
-        <!-- 08 · Dashboards & Datos con Python -->
+        <!-- 08 · Dashboards & Datos -->
         <article class="service-card reveal">
           <div class="service-card__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="9" rx="1.5" stroke="currentColor" stroke-width="1.6"/><rect x="14" y="3" width="7" height="5" rx="1.5" stroke="currentColor" stroke-width="1.6"/><rect x="14" y="12" width="7" height="9" rx="1.5" stroke="currentColor" stroke-width="1.6"/><rect x="3" y="16" width="7" height="5" rx="1.5" stroke="currentColor" stroke-width="1.6"/></svg>
           </div>
-          <h3>Dashboards &amp; Análisis de datos</h3>
-          <p>Indicadores claros y reportes automatizados con Python y Google Analytics que cuentan la historia detrás de los números.</p>
+          <h3 data-i18n-html="services.8.title">Dashboards &amp; Análisis de datos</h3>
+          <p data-i18n="services.8.desc">Indicadores claros y reportes automatizados con Python y Google Analytics que cuentan la historia detrás de los números.</p>
         </article>
 
       </div>
@@ -311,23 +319,23 @@
          ============================================================ -->
     <section class="section" id="stack">
       <header class="section__head reveal">
-        <span class="section__num">03 / Stack</span>
-        <h2 class="section__title">Herramientas que uso a diario.</h2>
+        <span class="section__num" data-i18n="stack.num">03 / Stack</span>
+        <h2 class="section__title" data-i18n="stack.title">Herramientas que uso a diario.</h2>
       </header>
 
       <div class="stack reveal">
         <div class="stack__cat">
-          <h3 class="stack__cat-title">Frontend</h3>
+          <h3 class="stack__cat-title" data-i18n="stack.cat.frontend">Frontend</h3>
           <ul class="stack__chips">
             <li><span class="chip-dot" style="background:#E34F26"></span>HTML</li>
             <li><span class="chip-dot" style="background:#1572B6"></span>CSS</li>
             <li><span class="chip-dot" style="background:#F7DF1E"></span>JavaScript</li>
-            <li><span class="chip-dot" style="background:#61DAFB"></span>React (fund.)</li>
+            <li><span class="chip-dot" style="background:#61DAFB"></span><span data-i18n="stack.react">React (fund.)</span></li>
           </ul>
         </div>
 
         <div class="stack__cat">
-          <h3 class="stack__cat-title">CMS</h3>
+          <h3 class="stack__cat-title" data-i18n="stack.cat.cms">CMS</h3>
           <ul class="stack__chips">
             <li><span class="chip-dot" style="background:#21759B"></span>WordPress</li>
             <li><span class="chip-dot" style="background:#1FAB89"></span>Crocoblock</li>
@@ -336,14 +344,14 @@
         </div>
 
         <div class="stack__cat">
-          <h3 class="stack__cat-title">Automatización</h3>
+          <h3 class="stack__cat-title" data-i18n="stack.cat.automation">Automatización</h3>
           <ul class="stack__chips">
             <li><span class="chip-dot" style="background:#EA4B71"></span>n8n</li>
           </ul>
         </div>
 
         <div class="stack__cat">
-          <h3 class="stack__cat-title">IA &amp; Data</h3>
+          <h3 class="stack__cat-title" data-i18n-html="stack.cat.aidata">IA &amp; Data</h3>
           <ul class="stack__chips">
             <li><span class="chip-dot" style="background:#10A37F"></span>OpenAI</li>
             <li><span class="chip-dot" style="background:#8B7CB8"></span>GPT</li>
@@ -352,7 +360,7 @@
         </div>
 
         <div class="stack__cat">
-          <h3 class="stack__cat-title">SEO &amp; Analítica</h3>
+          <h3 class="stack__cat-title" data-i18n-html="stack.cat.seo">SEO &amp; Analítica</h3>
           <ul class="stack__chips">
             <li><span class="chip-dot" style="background:#FF7A50"></span>Ahrefs</li>
             <li><span class="chip-dot" style="background:#FF642D"></span>Semrush</li>
@@ -363,7 +371,7 @@
         </div>
 
         <div class="stack__cat">
-          <h3 class="stack__cat-title">Infraestructura</h3>
+          <h3 class="stack__cat-title" data-i18n="stack.cat.infra">Infraestructura</h3>
           <ul class="stack__chips">
             <li><span class="chip-dot" style="background:#F47C20"></span>cPanel</li>
             <li><span class="chip-dot" style="background:#998574"></span>DNS</li>
@@ -372,7 +380,7 @@
         </div>
 
         <div class="stack__cat">
-          <h3 class="stack__cat-title">Control de versiones</h3>
+          <h3 class="stack__cat-title" data-i18n="stack.cat.vcs">Control de versiones</h3>
           <ul class="stack__chips">
             <li><span class="chip-dot" style="background:#F05032"></span>Git</li>
             <li><span class="chip-dot" style="background:#211D1B"></span>GitHub</li>
@@ -381,7 +389,7 @@
         </div>
 
         <div class="stack__cat">
-          <h3 class="stack__cat-title">Diseño</h3>
+          <h3 class="stack__cat-title" data-i18n="stack.cat.design">Diseño</h3>
           <ul class="stack__chips">
             <li><span class="chip-dot" style="background:#F24E1E"></span>Figma</li>
           </ul>
@@ -392,14 +400,12 @@
 
     <!-- ============================================================
          05 · PROYECTOS DESTACADOS
-         Para añadir un proyecto nuevo: duplica un <article.project>
-         y reemplaza imagen, textos, tecnologías y enlaces.
          ============================================================ -->
     <section class="section section--alt" id="projects">
       <header class="section__head reveal">
-        <span class="section__num">04 / Proyectos</span>
-        <h2 class="section__title">Casos donde la automatización <em>se nota</em>.</h2>
-        <p class="section__lead">Una selección curada de proyectos donde el código, la IA y el diseño trabajan juntos.</p>
+        <span class="section__num" data-i18n="projects.num">04 / Proyectos</span>
+        <h2 class="section__title" data-i18n-html="projects.title">Casos donde la automatización <em>se nota</em>.</h2>
+        <p class="section__lead" data-i18n="projects.lead">Una selección curada de proyectos donde el código, la IA y el diseño trabajan juntos.</p>
       </header>
 
       <div class="projects">
@@ -407,7 +413,6 @@
         <!-- ============ PROYECTO 1 ============ -->
         <article class="project reveal">
           <div class="project__media">
-            <!-- Placeholder gráfico — sustituye por una imagen real si la tienes -->
             <div class="project__cover project__cover--p1" aria-hidden="true">
               <svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice">
                 <defs>
@@ -439,34 +444,34 @@
 
           <div class="project__body">
             <h3 class="project__title">AI Mail Assistant</h3>
-            <p class="project__desc">
+            <p class="project__desc" data-i18n-html="projects.p1.desc">
               Sistema inteligente construido con <strong>n8n</strong> e
               <strong>IA</strong> para gestionar grandes volúmenes de correos:
               clasifica, prioriza, resume y crea tareas automáticamente.
             </p>
 
             <details class="project__more">
-              <summary>Ver detalles</summary>
+              <summary data-i18n="projects.viewDetails">Ver detalles</summary>
               <div class="project__grid">
                 <div>
-                  <h4>Funciones</h4>
+                  <h4 data-i18n="projects.functions">Funciones</h4>
                   <ul>
-                    <li>Lectura automática de correos</li>
-                    <li>Clasificación inteligente</li>
-                    <li>Detección de prioridad</li>
-                    <li>Resúmenes automáticos</li>
-                    <li>Creación de tareas</li>
-                    <li>Integración con calendarios</li>
-                    <li>Reportes automáticos</li>
+                    <li data-i18n="projects.p1.fn.1">Lectura automática de correos</li>
+                    <li data-i18n="projects.p1.fn.2">Clasificación inteligente</li>
+                    <li data-i18n="projects.p1.fn.3">Detección de prioridad</li>
+                    <li data-i18n="projects.p1.fn.4">Resúmenes automáticos</li>
+                    <li data-i18n="projects.p1.fn.5">Creación de tareas</li>
+                    <li data-i18n="projects.p1.fn.6">Integración con calendarios</li>
+                    <li data-i18n="projects.p1.fn.7">Reportes automáticos</li>
                   </ul>
                 </div>
                 <div>
-                  <h4>Objetivo</h4>
-                  <p>Liberar horas de bandeja de entrada y convertir cada correo en una acción concreta.</p>
-                  <h4>Retos</h4>
-                  <p>Diseñar prompts confiables, manejar contexto largo y orquestar múltiples servicios sin perder trazabilidad.</p>
-                  <h4>Resultados</h4>
-                  <p>Reducción significativa del tiempo dedicado a triage de correo y mayor consistencia en las respuestas.</p>
+                  <h4 data-i18n="projects.objective">Objetivo</h4>
+                  <p data-i18n="projects.p1.objective">Liberar horas de bandeja de entrada y convertir cada correo en una acción concreta.</p>
+                  <h4 data-i18n="projects.challenges">Retos</h4>
+                  <p data-i18n="projects.p1.challenges">Diseñar prompts confiables, manejar contexto largo y orquestar múltiples servicios sin perder trazabilidad.</p>
+                  <h4 data-i18n="projects.results">Resultados</h4>
+                  <p data-i18n="projects.p1.results">Reducción significativa del tiempo dedicado a triage de correo y mayor consistencia en las respuestas.</p>
                 </div>
               </div>
             </details>
@@ -476,8 +481,8 @@
             </ul>
 
             <div class="project__cta">
-              <a class="btn btn--small btn--primary" href="#" aria-label="Ver demo de AI Mail Assistant">Demo</a>
-              <a class="btn btn--small btn--ghost" href="#" aria-label="Ver código en GitHub">GitHub</a>
+              <a class="btn btn--small btn--primary" href="#" data-i18n-aria-label="projects.p1.aria.demo" aria-label="Ver demo de AI Mail Assistant"><span data-i18n="projects.demo">Demo</span></a>
+              <a class="btn btn--small btn--ghost" href="#" data-i18n-aria-label="projects.aria.github" aria-label="Ver código en GitHub">GitHub</a>
             </div>
           </div>
         </article>
@@ -513,33 +518,33 @@
 
           <div class="project__body">
             <h3 class="project__title">Aura Site Builder AI</h3>
-            <p class="project__desc">
+            <p class="project__desc" data-i18n-html="projects.p2.desc">
               Plataforma <strong>SaaS</strong> potenciada con IA que automatiza
               la creación inicial de sitios <strong>WordPress</strong>: sitemap,
               wireframes, SEO y contenido en minutos.
             </p>
 
             <details class="project__more">
-              <summary>Ver detalles</summary>
+              <summary data-i18n="projects.viewDetails">Ver detalles</summary>
               <div class="project__grid">
                 <div>
-                  <h4>Funciones</h4>
+                  <h4 data-i18n="projects.functions">Funciones</h4>
                   <ul>
-                    <li>Generación de sitemap</li>
-                    <li>Wireframes automáticos</li>
-                    <li>SEO automático</li>
-                    <li>Generación de contenido</li>
-                    <li>Conexión con WordPress vía REST API</li>
-                    <li>Orquestación mediante n8n</li>
+                    <li data-i18n="projects.p2.fn.1">Generación de sitemap</li>
+                    <li data-i18n="projects.p2.fn.2">Wireframes automáticos</li>
+                    <li data-i18n="projects.p2.fn.3">SEO automático</li>
+                    <li data-i18n="projects.p2.fn.4">Generación de contenido</li>
+                    <li data-i18n="projects.p2.fn.5">Conexión con WordPress vía REST API</li>
+                    <li data-i18n="projects.p2.fn.6">Orquestación mediante n8n</li>
                   </ul>
                 </div>
                 <div>
-                  <h4>Objetivo</h4>
-                  <p>Acortar de semanas a horas el arranque de un sitio WordPress profesional.</p>
-                  <h4>Retos</h4>
-                  <p>Mantener una identidad coherente, conectar IA generativa con la REST API y dejar el sitio editable sin fricción.</p>
-                  <h4>Resultados</h4>
-                  <p>Flujo end-to-end que entrega un sitio inicial listo para refinar, con SEO base y contenido coherente.</p>
+                  <h4 data-i18n="projects.objective">Objetivo</h4>
+                  <p data-i18n="projects.p2.objective">Acortar de semanas a horas el arranque de un sitio WordPress profesional.</p>
+                  <h4 data-i18n="projects.challenges">Retos</h4>
+                  <p data-i18n="projects.p2.challenges">Mantener una identidad coherente, conectar IA generativa con la REST API y dejar el sitio editable sin fricción.</p>
+                  <h4 data-i18n="projects.results">Resultados</h4>
+                  <p data-i18n="projects.p2.results">Flujo end-to-end que entrega un sitio inicial listo para refinar, con SEO base y contenido coherente.</p>
                 </div>
               </div>
             </details>
@@ -549,8 +554,8 @@
             </ul>
 
             <div class="project__cta">
-              <a class="btn btn--small btn--primary" href="#" aria-label="Ver demo de Aura Site Builder AI">Demo</a>
-              <a class="btn btn--small btn--ghost" href="#" aria-label="Ver código en GitHub">GitHub</a>
+              <a class="btn btn--small btn--primary" href="#" data-i18n-aria-label="projects.p2.aria.demo" aria-label="Ver demo de Aura Site Builder AI"><span data-i18n="projects.demo">Demo</span></a>
+              <a class="btn btn--small btn--ghost" href="#" data-i18n-aria-label="projects.aria.github" aria-label="Ver código en GitHub">GitHub</a>
             </div>
           </div>
         </article>
@@ -568,10 +573,8 @@
                 </defs>
                 <rect width="320" height="200" fill="url(#p3grad)"/>
 
-                <!-- Foto izquierda: mascota real estilizada -->
                 <g transform="translate(46,58)">
                   <rect x="-6" y="-6" width="92" height="92" rx="14" fill="#F4EFE8" stroke="#211D1B" stroke-width="1.4"/>
-                  <!-- Cabeza de gato -->
                   <path d="M22 38 L14 18 L30 28 L50 28 L66 18 L58 38 Q66 60 40 66 Q14 60 22 38 Z" fill="#998574"/>
                   <circle cx="32" cy="44" r="3" fill="#211D1B"/>
                   <circle cx="48" cy="44" r="3" fill="#211D1B"/>
@@ -579,17 +582,14 @@
                   <path d="M40 50 L40 53" stroke="#211D1B" stroke-width="1.4" stroke-linecap="round"/>
                 </g>
 
-                <!-- Flecha IA central -->
                 <g transform="translate(160,100)" stroke="#211D1B" stroke-width="1.6" fill="none" stroke-linecap="round">
                   <path d="M-12 0 L18 0"/>
                   <path d="M10 -6 L18 0 L10 6"/>
                   <text x="3" y="-14" font-family="JetBrains Mono, monospace" font-size="9" fill="#8B7CB8" letter-spacing="2" text-anchor="middle" stroke="none">VISION → FLUX</text>
                 </g>
 
-                <!-- Avatar derecha: estilizado Pixar -->
                 <g transform="translate(218,58)">
                   <rect x="-6" y="-6" width="92" height="92" rx="14" fill="#F4EFE8" stroke="#211D1B" stroke-width="1.4"/>
-                  <!-- Avatar gato Pixar -->
                   <path d="M22 40 L12 16 L30 28 L50 28 L68 16 L58 40 Q70 64 40 70 Q10 64 22 40 Z" fill="#B2A6D4"/>
                   <ellipse cx="32" cy="44" rx="4" ry="5" fill="#F4EFE8"/>
                   <ellipse cx="48" cy="44" rx="4" ry="5" fill="#F4EFE8"/>
@@ -597,7 +597,6 @@
                   <circle cx="48" cy="45" r="2" fill="#211D1B"/>
                   <ellipse cx="40" cy="54" rx="3" ry="2" fill="#DEB6AE"/>
                   <path d="M34 58 Q40 64 46 58" stroke="#211D1B" stroke-width="1.4" fill="none" stroke-linecap="round"/>
-                  <!-- Sparkle de IA -->
                   <g transform="translate(64,12)" fill="#C9988F">
                     <path d="M0 -5 L1 -1 L5 0 L1 1 L0 5 L-1 1 L-5 0 L-1 -1 Z"/>
                   </g>
@@ -609,7 +608,7 @@
 
           <div class="project__body">
             <h3 class="project__title">Furl Life — Avatar Matching</h3>
-            <p class="project__desc">
+            <p class="project__desc" data-i18n-html="projects.p3.desc">
               Aplicación <strong>Node.js / Express</strong> que identifica los
               rasgos de una mascota a partir de una foto y devuelve un avatar
               estilizado tipo <em>Pixar / Dreamworks</em> usando
@@ -617,26 +616,26 @@
             </p>
 
             <details class="project__more">
-              <summary>Ver detalles</summary>
+              <summary data-i18n="projects.viewDetails">Ver detalles</summary>
               <div class="project__grid">
                 <div>
-                  <h4>Funciones</h4>
+                  <h4 data-i18n="projects.functions">Funciones</h4>
                   <ul>
-                    <li>Reconocimiento de imagen con Vision AI (especie, raza, color, edad)</li>
-                    <li>Búsqueda inteligente en catálogo local de avatares</li>
-                    <li>Generación con FLUX.1 cuando no hay match</li>
-                    <li>Caché automático: el sistema "aprende" y se vuelve más rápido</li>
-                    <li>Gestión de subidas con Multer</li>
-                    <li>Preparado para desplegar en Oracle Cloud (OCI)</li>
+                    <li data-i18n="projects.p3.fn.1">Reconocimiento de imagen con Vision AI (especie, raza, color, edad)</li>
+                    <li data-i18n="projects.p3.fn.2">Búsqueda inteligente en catálogo local de avatares</li>
+                    <li data-i18n="projects.p3.fn.3">Generación con FLUX.1 cuando no hay match</li>
+                    <li data-i18n="projects.p3.fn.4">Caché automático: el sistema "aprende" y se vuelve más rápido</li>
+                    <li data-i18n="projects.p3.fn.5">Gestión de subidas con Multer</li>
+                    <li data-i18n="projects.p3.fn.6">Preparado para desplegar en Oracle Cloud (OCI)</li>
                   </ul>
                 </div>
                 <div>
-                  <h4>Objetivo</h4>
-                  <p>Entregar avatares estilizados que reflejen los rasgos reales de cada mascota, en segundos y sin intervención manual.</p>
-                  <h4>Retos</h4>
-                  <p>Conectar Vision AI con un catálogo dinámico, decidir cuándo reutilizar y cuándo generar con FLUX.1, y mantener la consistencia visual del estilo.</p>
-                  <h4>Resultados</h4>
-                  <p>Pipeline end-to-end: foto → atributos → avatar. Cada generación enriquece el catálogo, reduciendo costos y tiempos de respuesta.</p>
+                  <h4 data-i18n="projects.objective">Objetivo</h4>
+                  <p data-i18n="projects.p3.objective">Entregar avatares estilizados que reflejen los rasgos reales de cada mascota, en segundos y sin intervención manual.</p>
+                  <h4 data-i18n="projects.challenges">Retos</h4>
+                  <p data-i18n="projects.p3.challenges">Conectar Vision AI con un catálogo dinámico, decidir cuándo reutilizar y cuándo generar con FLUX.1, y mantener la consistencia visual del estilo.</p>
+                  <h4 data-i18n="projects.results">Resultados</h4>
+                  <p data-i18n="projects.p3.results">Pipeline end-to-end: foto → atributos → avatar. Cada generación enriquece el catálogo, reduciendo costos y tiempos de respuesta.</p>
                 </div>
               </div>
             </details>
@@ -646,11 +645,11 @@
             </ul>
 
             <div class="project__cta">
-              <a class="btn btn--small btn--primary" href="https://github.com/sofygg10/furllife-avatar" target="_blank" rel="noopener" aria-label="Ver código de Furl Life en GitHub">
+              <a class="btn btn--small btn--primary" href="https://github.com/sofygg10/furllife-avatar" target="_blank" rel="noopener" data-i18n-aria-label="projects.p3.aria.github" aria-label="Ver código de Furl Life en GitHub">
                 GitHub
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </a>
-              <a class="btn btn--small btn--ghost" href="https://github.com/sofygg10/furllife-avatar#readme" target="_blank" rel="noopener" aria-label="Ver documentación de Furl Life">Docs</a>
+              <a class="btn btn--small btn--ghost" href="https://github.com/sofygg10/furllife-avatar#readme" target="_blank" rel="noopener" data-i18n-aria-label="projects.p3.aria.docs" aria-label="Ver documentación de Furl Life"><span data-i18n="projects.docs">Docs</span></a>
             </div>
           </div>
         </article>
@@ -661,6 +660,7 @@
             <div class="project__cover project__cover--p4">
               <img
                 src="assets/img/furlife-luna-overview.png"
+                data-i18n-alt="projects.p4.alt.overview"
                 alt="Vista general del workflow de n8n con los flujos Chat de Luna y Recordatorio diario"
                 loading="lazy"
                 decoding="async"
@@ -670,34 +670,34 @@
           </div>
 
           <div class="project__body">
-            <h3 class="project__title">FurLife — Asistente IA "Luna" en n8n</h3>
-            <p class="project__desc">
+            <h3 class="project__title" data-i18n="projects.p4.title">FurLife — Asistente IA "Luna" en n8n</h3>
+            <p class="project__desc" data-i18n-html="projects.p4.desc">
               Workflow en <strong>n8n</strong> que expone un asistente conversacional
               con <strong>Google Gemini</strong> y un sistema proactivo de
               recordatorios diarios para citas veterinarias del día siguiente.
             </p>
 
             <details class="project__more">
-              <summary>Ver detalles</summary>
+              <summary data-i18n="projects.viewDetails">Ver detalles</summary>
               <div class="project__grid">
                 <div>
-                  <h4>Funciones</h4>
+                  <h4 data-i18n="projects.functions">Funciones</h4>
                   <ul>
-                    <li>Chat reactivo vía webhook con memoria por <code>session_id</code></li>
-                    <li>Tool calling: Google Calendar + búsqueda web (Serper)</li>
-                    <li><em>Action codes</em> que indican al frontend qué pantalla abrir</li>
-                    <li>Recordatorio diario a las 8 AM por Gmail</li>
-                    <li>Redacción cariñosa con emojis 🐾 generada por un segundo agente</li>
-                    <li>Infra local con Docker Compose</li>
+                    <li data-i18n-html="projects.p4.fn.1">Chat reactivo vía webhook con memoria por <code>session_id</code></li>
+                    <li data-i18n="projects.p4.fn.2">Tool calling: Google Calendar + búsqueda web (Serper)</li>
+                    <li data-i18n-html="projects.p4.fn.3"><em>Action codes</em> que indican al frontend qué pantalla abrir</li>
+                    <li data-i18n="projects.p4.fn.4">Recordatorio diario a las 8 AM por Gmail</li>
+                    <li data-i18n="projects.p4.fn.5">Redacción cariñosa con emojis 🐾 generada por un segundo agente</li>
+                    <li data-i18n="projects.p4.fn.6">Infra local con Docker Compose</li>
                   </ul>
                 </div>
                 <div>
-                  <h4>Objetivo</h4>
-                  <p>Dar al vertical de mascotas un asistente conversacional barato y rápido que además avise proactivamente al dueño cuando su mascota tiene cita al día siguiente.</p>
-                  <h4>Retos</h4>
-                  <p>Desacoplar IA y frontend mediante <em>action codes</em> estables, mantener memoria por usuario y orquestar dos flujos (reactivo + proactivo) en el mismo canvas sin acoplarlos.</p>
-                  <h4>Decisiones técnicas</h4>
-                  <p>Gemini Flash por latencia y costo, memoria por <code>session_id</code> y separación del JSON del texto en un nodo de código para que la app reaccione a códigos estables aunque el modelo varíe su redacción.</p>
+                  <h4 data-i18n="projects.objective">Objetivo</h4>
+                  <p data-i18n="projects.p4.objective">Dar al vertical de mascotas un asistente conversacional barato y rápido que además avise proactivamente al dueño cuando su mascota tiene cita al día siguiente.</p>
+                  <h4 data-i18n="projects.challenges">Retos</h4>
+                  <p data-i18n-html="projects.p4.challenges">Desacoplar IA y frontend mediante <em>action codes</em> estables, mantener memoria por usuario y orquestar dos flujos (reactivo + proactivo) en el mismo canvas sin acoplarlos.</p>
+                  <h4 data-i18n="projects.decisions">Decisiones técnicas</h4>
+                  <p data-i18n-html="projects.p4.decisions">Gemini Flash por latencia y costo, memoria por <code>session_id</code> y separación del JSON del texto en un nodo de código para que la app reaccione a códigos estables aunque el modelo varíe su redacción.</p>
                 </div>
               </div>
 
@@ -705,20 +705,22 @@
                 <figure>
                   <img
                     src="assets/img/furlife-luna-chat-flow.png"
+                    data-i18n-alt="projects.p4.alt.flow"
                     alt="Detalle del Flujo 1: Webhook → AI Agent (Gemini) con memoria, búsqueda y calendar_manager → Code JS → Respond to Webhook"
                     loading="lazy"
                     decoding="async"
                   />
-                  <figcaption>Flujo 1 · Chat de Luna con tool calling</figcaption>
+                  <figcaption data-i18n="projects.p4.caption.1">Flujo 1 · Chat de Luna con tool calling</figcaption>
                 </figure>
                 <figure>
                   <img
                     src="assets/img/furlife-luna-postman.png"
+                    data-i18n-alt="projects.p4.alt.postman"
                     alt="Prueba del webhook en Postman mostrando la respuesta con status, response y action_code"
                     loading="lazy"
                     decoding="async"
                   />
-                  <figcaption>Prueba real · respuesta con <code>action_code</code></figcaption>
+                  <figcaption data-i18n-html="projects.p4.caption.2">Prueba real · respuesta con <code>action_code</code></figcaption>
                 </figure>
               </div>
             </details>
@@ -728,11 +730,11 @@
             </ul>
 
             <div class="project__cta">
-              <a class="btn btn--small btn--primary" href="https://github.com/sofygg10/furlife-n8n-" target="_blank" rel="noopener" aria-label="Ver código de FurLife Luna en GitHub">
+              <a class="btn btn--small btn--primary" href="https://github.com/sofygg10/furlife-n8n-" target="_blank" rel="noopener" data-i18n-aria-label="projects.p4.aria.github" aria-label="Ver código de FurLife Luna en GitHub">
                 GitHub
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </a>
-              <a class="btn btn--small btn--ghost" href="https://github.com/sofygg10/furlife-n8n-#readme" target="_blank" rel="noopener" aria-label="Ver documentación de FurLife Luna">Docs</a>
+              <a class="btn btn--small btn--ghost" href="https://github.com/sofygg10/furlife-n8n-#readme" target="_blank" rel="noopener" data-i18n-aria-label="projects.p4.aria.docs" aria-label="Ver documentación de FurLife Luna"><span data-i18n="projects.docs">Docs</span></a>
             </div>
           </div>
         </article>
@@ -740,44 +742,44 @@
 
       <!-- ============ PRÓXIMOS PROYECTOS ============ -->
       <header class="section__head section__head--sub reveal">
-        <span class="section__num">04.b / En construcción</span>
-        <h3 class="section__subtitle">Próximos proyectos</h3>
-        <p class="section__lead">Reservando espacio para lo que viene.</p>
+        <span class="section__num" data-i18n="upcoming.num">04.b / En construcción</span>
+        <h3 class="section__subtitle" data-i18n="upcoming.title">Próximos proyectos</h3>
+        <p class="section__lead" data-i18n="upcoming.lead">Reservando espacio para lo que viene.</p>
       </header>
 
       <div class="upcoming">
         <article class="upcoming-card reveal">
-          <span class="upcoming-card__tag">Automatización</span>
-          <h4>Workflow empresarial</h4>
-          <p>Pipelines internos para escalar operaciones con IA y orquestación n8n.</p>
+          <span class="upcoming-card__tag" data-i18n="upcoming.1.tag">Automatización</span>
+          <h4 data-i18n="upcoming.1.title">Workflow empresarial</h4>
+          <p data-i18n="upcoming.1.desc">Pipelines internos para escalar operaciones con IA y orquestación n8n.</p>
           <span class="upcoming-card__dot" aria-hidden="true"></span>
         </article>
 
         <article class="upcoming-card reveal">
-          <span class="upcoming-card__tag">Dashboard</span>
-          <h4>Analítica accionable</h4>
-          <p>Visualización en tiempo real para equipos de marketing y producto.</p>
+          <span class="upcoming-card__tag" data-i18n="upcoming.2.tag">Dashboard</span>
+          <h4 data-i18n="upcoming.2.title">Analítica accionable</h4>
+          <p data-i18n="upcoming.2.desc">Visualización en tiempo real para equipos de marketing y producto.</p>
           <span class="upcoming-card__dot" aria-hidden="true"></span>
         </article>
 
         <article class="upcoming-card reveal">
-          <span class="upcoming-card__tag">IA aplicada</span>
-          <h4>Asistente vertical</h4>
-          <p>Agente especializado por industria, con memoria y herramientas propias.</p>
+          <span class="upcoming-card__tag" data-i18n="upcoming.3.tag">IA aplicada</span>
+          <h4 data-i18n="upcoming.3.title">Asistente vertical</h4>
+          <p data-i18n="upcoming.3.desc">Agente especializado por industria, con memoria y herramientas propias.</p>
           <span class="upcoming-card__dot" aria-hidden="true"></span>
         </article>
 
         <article class="upcoming-card reveal">
-          <span class="upcoming-card__tag">SaaS</span>
-          <h4>Producto en validación</h4>
-          <p>Una idea que mezcla automatización y contenido para creadores.</p>
+          <span class="upcoming-card__tag" data-i18n="upcoming.4.tag">SaaS</span>
+          <h4 data-i18n="upcoming.4.title">Producto en validación</h4>
+          <p data-i18n="upcoming.4.desc">Una idea que mezcla automatización y contenido para creadores.</p>
           <span class="upcoming-card__dot" aria-hidden="true"></span>
         </article>
 
         <article class="upcoming-card reveal">
-          <span class="upcoming-card__tag">Empresa</span>
-          <h4>Proyecto cliente</h4>
-          <p>Implementación a medida en proceso. Pronto será publicada aquí.</p>
+          <span class="upcoming-card__tag" data-i18n="upcoming.5.tag">Empresa</span>
+          <h4 data-i18n="upcoming.5.title">Proyecto cliente</h4>
+          <p data-i18n="upcoming.5.desc">Implementación a medida en proceso. Pronto será publicada aquí.</p>
           <span class="upcoming-card__dot" aria-hidden="true"></span>
         </article>
       </div>
@@ -789,62 +791,62 @@
          ============================================================ -->
     <section class="section" id="journey">
       <header class="section__head reveal">
-        <span class="section__num">05 / Trayectoria</span>
-        <h2 class="section__title">Una ruta que evoluciona con la tecnología.</h2>
+        <span class="section__num" data-i18n="journey.num">05 / Trayectoria</span>
+        <h2 class="section__title" data-i18n="journey.title">Una ruta que evoluciona con la tecnología.</h2>
       </header>
 
       <ol class="timeline">
         <li class="timeline__item reveal">
           <span class="timeline__dot"></span>
           <div class="timeline__body">
-            <span class="timeline__phase">2021 · Inicio</span>
-            <h3>Técnico Profesional en Programación</h3>
-            <p>Universidad Autónoma de Manizales. Bases sólidas de programación, lógica y sistemas.</p>
+            <span class="timeline__phase" data-i18n="journey.1.phase">2021 · Inicio</span>
+            <h3 data-i18n="journey.1.title">Técnico Profesional en Programación</h3>
+            <p data-i18n="journey.1.body">Universidad Autónoma de Manizales. Bases sólidas de programación, lógica y sistemas.</p>
           </div>
         </li>
 
         <li class="timeline__item reveal">
           <span class="timeline__dot"></span>
           <div class="timeline__body">
-            <span class="timeline__phase">2022 · Tecnología</span>
-            <h3>Tecnóloga en Análisis y Desarrollo de Sistemas</h3>
-            <p>Universidad Autónoma de Manizales. Análisis, programación y desarrollo de sistemas de información.</p>
+            <span class="timeline__phase" data-i18n="journey.2.phase">2022 · Tecnología</span>
+            <h3 data-i18n="journey.2.title">Tecnóloga en Análisis y Desarrollo de Sistemas</h3>
+            <p data-i18n="journey.2.body">Universidad Autónoma de Manizales. Análisis, programación y desarrollo de sistemas de información.</p>
           </div>
         </li>
 
         <li class="timeline__item reveal">
           <span class="timeline__dot"></span>
           <div class="timeline__body">
-            <span class="timeline__phase">2023 – 2024 · Creative Studios SAS</span>
-            <h3>Analista SEO &amp; Desarrolladora Frontend</h3>
-            <p>Auditorías técnicas con Screaming Frog, Ahrefs y Semrush. Optimización de velocidad y estructura. Frontend con HTML, CSS y JavaScript. Administración de WordPress y Wix.</p>
+            <span class="timeline__phase" data-i18n="journey.3.phase">2023 – 2024 · Creative Studios SAS</span>
+            <h3 data-i18n-html="journey.3.title">Analista SEO &amp; Desarrolladora Frontend</h3>
+            <p data-i18n="journey.3.body">Auditorías técnicas con Screaming Frog, Ahrefs y Semrush. Optimización de velocidad y estructura. Frontend con HTML, CSS y JavaScript. Administración de WordPress y Wix.</p>
           </div>
         </li>
 
         <li class="timeline__item reveal">
           <span class="timeline__dot"></span>
           <div class="timeline__body">
-            <span class="timeline__phase">Bootcamp · IA</span>
-            <h3>Inteligencia Artificial</h3>
-            <p>Fundamentos de IA, desarrollo de modelos básicos y análisis de datos con Python.</p>
+            <span class="timeline__phase" data-i18n="journey.4.phase">Bootcamp · IA</span>
+            <h3 data-i18n="journey.4.title">Inteligencia Artificial</h3>
+            <p data-i18n="journey.4.body">Fundamentos de IA, desarrollo de modelos básicos y análisis de datos con Python.</p>
           </div>
         </li>
 
         <li class="timeline__item reveal">
           <span class="timeline__dot"></span>
           <div class="timeline__body">
-            <span class="timeline__phase">2025 – 2026 · OrbidI</span>
-            <h3>Web Implementer / WordPress Developer</h3>
-            <p>WordPress + Crocoblock en producción. Administración de hosting con cPanel, migraciones críticas (cero pérdida de datos), zonas DNS y registros A/CNAME/TXT. Flujos n8n para interceptar excepciones del CMS y clasificar correos automáticamente.</p>
+            <span class="timeline__phase" data-i18n="journey.5.phase">2025 – 2026 · OrbidI</span>
+            <h3 data-i18n="journey.5.title">Web Implementer / WordPress Developer</h3>
+            <p data-i18n="journey.5.body">WordPress + Crocoblock en producción. Administración de hosting con cPanel, migraciones críticas (cero pérdida de datos), zonas DNS y registros A/CNAME/TXT. Flujos n8n para interceptar excepciones del CMS y clasificar correos automáticamente.</p>
           </div>
         </li>
 
         <li class="timeline__item reveal">
           <span class="timeline__dot timeline__dot--current"></span>
           <div class="timeline__body">
-            <span class="timeline__phase">En curso · Universidad de Manizales</span>
-            <h3>Ingeniería en Sistemas y Telecomunicaciones</h3>
-            <p>Octavo semestre. Profundizando en arquitectura de software, redes, datos e ingeniería para construir productos digitales sólidos y escalables.</p>
+            <span class="timeline__phase" data-i18n="journey.6.phase">En curso · Universidad de Manizales</span>
+            <h3 data-i18n="journey.6.title">Ingeniería en Sistemas y Telecomunicaciones</h3>
+            <p data-i18n="journey.6.body">Octavo semestre. Profundizando en arquitectura de software, redes, datos e ingeniería para construir productos digitales sólidos y escalables.</p>
           </div>
         </li>
       </ol>
@@ -856,41 +858,41 @@
          ============================================================ -->
     <section class="section section--alt" id="contact">
       <header class="section__head reveal">
-        <span class="section__num">06 / Contacto</span>
-        <h2 class="section__title">Hablemos de tu próximo proyecto.</h2>
-        <p class="section__lead">¿Una idea? ¿Una integración? ¿Una colaboración? Escríbeme y te respondo personalmente.</p>
+        <span class="section__num" data-i18n="contact.num">06 / Contacto</span>
+        <h2 class="section__title" data-i18n="contact.title">Hablemos de tu próximo proyecto.</h2>
+        <p class="section__lead" data-i18n="contact.lead">¿Una idea? ¿Una integración? ¿Una colaboración? Escríbeme y te respondo personalmente.</p>
       </header>
 
       <div class="contact reveal">
         <form class="contact__form" id="contactForm" novalidate>
           <div class="field">
-            <label for="cf-name">Nombre</label>
-            <input type="text" id="cf-name" name="name" required autocomplete="name" placeholder="Tu nombre completo" />
+            <label for="cf-name" data-i18n="form.name">Nombre</label>
+            <input type="text" id="cf-name" name="name" required autocomplete="name" data-i18n-placeholder="form.namePh" placeholder="Tu nombre completo" />
           </div>
 
           <div class="field">
-            <label for="cf-email">Correo</label>
-            <input type="email" id="cf-email" name="email" required autocomplete="email" placeholder="tunombre@email.com" />
+            <label for="cf-email" data-i18n="form.email">Correo</label>
+            <input type="email" id="cf-email" name="email" required autocomplete="email" data-i18n-placeholder="form.emailPh" placeholder="tunombre@email.com" />
           </div>
 
           <div class="field">
-            <label for="cf-topic">Tema</label>
+            <label for="cf-topic" data-i18n="form.topic">Tema</label>
             <select id="cf-topic" name="topic">
-              <option value="proyecto">Proyecto / cotización</option>
-              <option value="consultoria">Consultoría</option>
-              <option value="colaboracion">Colaboración</option>
-              <option value="oportunidad">Oportunidad laboral</option>
-              <option value="otro">Otro</option>
+              <option value="proyecto" data-i18n="form.topic.project">Proyecto / cotización</option>
+              <option value="consultoria" data-i18n="form.topic.consultancy">Consultoría</option>
+              <option value="colaboracion" data-i18n="form.topic.collab">Colaboración</option>
+              <option value="oportunidad" data-i18n="form.topic.opportunity">Oportunidad laboral</option>
+              <option value="otro" data-i18n="form.topic.other">Otro</option>
             </select>
           </div>
 
           <div class="field">
-            <label for="cf-message">Mensaje</label>
-            <textarea id="cf-message" name="message" rows="5" required placeholder="Cuéntame brevemente en qué puedo ayudarte"></textarea>
+            <label for="cf-message" data-i18n="form.message">Mensaje</label>
+            <textarea id="cf-message" name="message" rows="5" required data-i18n-placeholder="form.messagePh" placeholder="Cuéntame brevemente en qué puedo ayudarte"></textarea>
           </div>
 
           <button type="submit" class="btn btn--primary btn--block">
-            Enviar mensaje
+            <span data-i18n="form.submit">Enviar mensaje</span>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
 
@@ -898,20 +900,19 @@
         </form>
 
         <aside class="contact__channels">
-          <p class="eyebrow"><span class="eyebrow__dot"></span><span>Canales directos</span></p>
+          <p class="eyebrow"><span class="eyebrow__dot"></span><span data-i18n="contact.channels">Canales directos</span></p>
 
-          <!-- Datos reales — actualízalos cuando lo necesites -->
-          <a class="channel" href="mailto:sofygonzalez1012@gmail.com" aria-label="Escribir por correo">
+          <a class="channel" href="mailto:sofygonzalez1012@gmail.com" data-i18n-aria-label="channel.aria.email" aria-label="Escribir por correo">
             <span class="channel__ic" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.6"/></svg>
             </span>
             <span class="channel__txt">
-              <span class="channel__lbl">Correo</span>
+              <span class="channel__lbl" data-i18n="channel.email">Correo</span>
               <span class="channel__val">sofygonzalez1012@gmail.com</span>
             </span>
           </a>
 
-          <a class="channel" href="https://www.linkedin.com/in/sofia-gonzalez-63b192244/" target="_blank" rel="noopener" aria-label="Visitar LinkedIn">
+          <a class="channel" href="https://www.linkedin.com/in/sofia-gonzalez-63b192244/" target="_blank" rel="noopener" data-i18n-aria-label="channel.aria.linkedin" aria-label="Visitar LinkedIn">
             <span class="channel__ic" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 014 0v4M12 10v7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
             </span>
@@ -921,7 +922,7 @@
             </span>
           </a>
 
-          <a class="channel" href="https://github.com/sofygg10" target="_blank" rel="noopener" aria-label="Visitar GitHub">
+          <a class="channel" href="https://github.com/sofygg10" target="_blank" rel="noopener" data-i18n-aria-label="channel.aria.github" aria-label="Visitar GitHub">
             <span class="channel__ic" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none"><path d="M12 2a10 10 0 00-3.16 19.5c.5.1.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.95 0-1.1.39-2 1.03-2.7-.1-.26-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.03A9.5 9.5 0 0112 6.8c.85 0 1.7.12 2.5.34 1.9-1.3 2.75-1.03 2.75-1.03.55 1.37.2 2.38.1 2.64.64.7 1.03 1.6 1.03 2.7 0 3.85-2.34 4.7-4.57 4.95.36.31.68.93.68 1.87v2.77c0 .27.18.59.69.48A10 10 0 0012 2z" stroke="currentColor" stroke-width="1.4"/></svg>
             </span>
@@ -931,7 +932,7 @@
             </span>
           </a>
 
-          <a class="channel" href="https://wa.me/573204003485" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+          <a class="channel" href="https://wa.me/573204003485" target="_blank" rel="noopener" data-i18n-aria-label="channel.aria.whatsapp" aria-label="Escribir por WhatsApp">
             <span class="channel__ic" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none"><path d="M20 12a8 8 0 11-3.05-6.28L20 4l-1.3 3.18A7.96 7.96 0 0120 12z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M9 10c0 3 2 5 5 5l1.5-1.5-2-1-1 1c-1 0-2-1-2-2l1-1-1-2L9 10z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
             </span>
@@ -941,13 +942,13 @@
             </span>
           </a>
 
-          <div class="channel channel--mute" aria-label="Ubicación">
+          <div class="channel channel--mute" data-i18n-aria-label="channel.aria.location" aria-label="Ubicación">
             <span class="channel__ic" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none"><path d="M12 22s7-7.5 7-13a7 7 0 10-14 0c0 5.5 7 13 7 13z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>
             </span>
             <span class="channel__txt">
-              <span class="channel__lbl">Ubicación</span>
-              <span class="channel__val">Manizales, Colombia · disponible remoto</span>
+              <span class="channel__lbl" data-i18n="channel.location">Ubicación</span>
+              <span class="channel__val" data-i18n="channel.location.value">Manizales, Colombia · disponible remoto</span>
             </span>
           </div>
 
@@ -957,7 +958,7 @@
               <line x1="10" y1="48" x2="48" y2="48" stroke="#211D1B" stroke-width="1.5" stroke-linecap="round"/>
               <circle cx="29" cy="11" r="2.8" fill="#DEB6AE"/>
             </svg>
-            <p>Disponible para nuevos proyectos en 2026.</p>
+            <p data-i18n="contact.signature">Disponible para nuevos proyectos en 2026.</p>
           </div>
         </aside>
       </div>
@@ -972,14 +973,14 @@
   <footer class="footer">
     <div class="footer__inner">
       <p class="footer__quote">
-        <em>Construyendo soluciones inteligentes para el futuro.</em>
+        <em data-i18n="footer.quote">Construyendo soluciones inteligentes para el futuro.</em>
       </p>
       <p class="footer__meta">
         <span>© <span id="year">2026</span> · Sofía Gonzalez García</span>
         <span class="footer__dot">·</span>
         <span>Manizales, Colombia</span>
         <span class="footer__dot">·</span>
-        <span>Hecho con HTML, CSS y JavaScript</span>
+        <span data-i18n="footer.tech">Hecho con HTML, CSS y JavaScript</span>
       </p>
     </div>
   </footer>

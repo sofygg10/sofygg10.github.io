@@ -356,6 +356,52 @@ em { font-style: italic; color: var(--rosa-deep); }
 .nav__toggle.is-open span:nth-child(2) { opacity: 0; }
 .nav__toggle.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
+/* Selector de idioma */
+.nav__lang {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 6px;
+  padding-left: 18px;
+  border-left: 1px solid var(--hair);
+}
+.nav__lang-btn {
+  background: transparent;
+  border: none;
+  padding: 4px 4px;
+  cursor: pointer;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: var(--tinta-45);
+  text-transform: uppercase;
+  border-radius: 4px;
+  transition: color var(--t-fast) var(--ease), background var(--t-fast) var(--ease);
+}
+.nav__lang-btn:hover { color: var(--tinta); }
+.nav__lang-btn:focus-visible {
+  outline: 1.5px solid var(--rosa-deep);
+  outline-offset: 2px;
+}
+.nav__lang-btn.is-active {
+  color: var(--rosa-deep);
+  font-weight: 600;
+}
+.nav__lang-btn.is-active::after {
+  content: '';
+  display: block;
+  height: 1.5px;
+  margin-top: 2px;
+  background: var(--rosa-deep);
+  border-radius: 1px;
+}
+.nav__lang-sep {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--tinta-15);
+  user-select: none;
+}
+
 
 /* ============================================================
    5 · HERO
@@ -1314,6 +1360,20 @@ em { font-style: italic; color: var(--rosa-deep); }
   .nav__menu a::after { display: none; }
   .nav__cta { width: 100%; justify-content: center; margin-top: 8px; padding: 14px 0; }
   .nav__toggle { display: flex; }
+
+  .nav__lang {
+    width: 100%;
+    justify-content: center;
+    margin-left: 0;
+    padding-left: 0;
+    margin-top: 14px;
+    padding-top: 14px;
+    border-left: none;
+    border-top: 1px solid var(--hair);
+    gap: 10px;
+  }
+  .nav__lang-btn { font-size: 13px; padding: 6px 10px; }
+  .nav__lang-sep { font-size: 13px; }
 
   .hero__kpis { grid-template-columns: 1fr; gap: 12px; }
 
