@@ -137,6 +137,7 @@
       'projects.demo': 'Demo',
       'projects.docs': 'Docs',
       'projects.aria.github': 'Ver código en GitHub',
+      'projects.comingSoon': 'En desarrollo — próximamente',
 
       'projects.p1.desc': 'Sistema inteligente construido con <strong>n8n</strong> e <strong>IA</strong> para gestionar grandes volúmenes de correos: clasifica, prioriza, resume y crea tareas automáticamente.',
       'projects.p1.fn.1': 'Lectura automática de correos',
@@ -400,6 +401,7 @@
       'projects.demo': 'Demo',
       'projects.docs': 'Docs',
       'projects.aria.github': 'View code on GitHub',
+      'projects.comingSoon': 'In development — coming soon',
 
       'projects.p1.desc': 'Smart system built with <strong>n8n</strong> and <strong>AI</strong> to manage large email volumes: it classifies, prioritizes, summarizes and creates tasks automatically.',
       'projects.p1.fn.1': 'Automatic email reading',
@@ -622,6 +624,12 @@
     document.querySelectorAll('[data-i18n-aria-label]').forEach(el => {
       const v = get(el.dataset.i18nAriaLabel);
       if (v !== null) el.setAttribute('aria-label', v);
+    });
+
+    // title (tooltip)
+    document.querySelectorAll('[data-i18n-title]').forEach(el => {
+      const v = get(el.dataset.i18nTitle);
+      if (v !== null) el.setAttribute('title', v);
     });
 
     // meta content
