@@ -570,45 +570,14 @@
         <!-- ============ PROYECTO 3 ============ -->
         <article class="project reveal">
           <div class="project__media">
-            <div class="project__cover project__cover--p3" aria-hidden="true">
-              <svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice">
-                <defs>
-                  <linearGradient id="p3grad" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0" stop-color="#F0DCD8"/>
-                    <stop offset="1" stop-color="#E2DDF0"/>
-                  </linearGradient>
-                </defs>
-                <rect width="320" height="200" fill="url(#p3grad)"/>
-
-                <g transform="translate(46,58)">
-                  <rect x="-6" y="-6" width="92" height="92" rx="14" fill="#F4EFE8" stroke="#211D1B" stroke-width="1.4"/>
-                  <path d="M22 38 L14 18 L30 28 L50 28 L66 18 L58 38 Q66 60 40 66 Q14 60 22 38 Z" fill="#998574"/>
-                  <circle cx="32" cy="44" r="3" fill="#211D1B"/>
-                  <circle cx="48" cy="44" r="3" fill="#211D1B"/>
-                  <path d="M37 52 Q40 56 43 52" stroke="#211D1B" stroke-width="1.4" fill="none" stroke-linecap="round"/>
-                  <path d="M40 50 L40 53" stroke="#211D1B" stroke-width="1.4" stroke-linecap="round"/>
-                </g>
-
-                <g transform="translate(160,100)" stroke="#211D1B" stroke-width="1.6" fill="none" stroke-linecap="round">
-                  <path d="M-12 0 L18 0"/>
-                  <path d="M10 -6 L18 0 L10 6"/>
-                  <text x="3" y="-14" font-family="JetBrains Mono, monospace" font-size="9" fill="#8B7CB8" letter-spacing="2" text-anchor="middle" stroke="none">VISION → FLUX</text>
-                </g>
-
-                <g transform="translate(218,58)">
-                  <rect x="-6" y="-6" width="92" height="92" rx="14" fill="#F4EFE8" stroke="#211D1B" stroke-width="1.4"/>
-                  <path d="M22 40 L12 16 L30 28 L50 28 L68 16 L58 40 Q70 64 40 70 Q10 64 22 40 Z" fill="#B2A6D4"/>
-                  <ellipse cx="32" cy="44" rx="4" ry="5" fill="#F4EFE8"/>
-                  <ellipse cx="48" cy="44" rx="4" ry="5" fill="#F4EFE8"/>
-                  <circle cx="32" cy="45" r="2" fill="#211D1B"/>
-                  <circle cx="48" cy="45" r="2" fill="#211D1B"/>
-                  <ellipse cx="40" cy="54" rx="3" ry="2" fill="#DEB6AE"/>
-                  <path d="M34 58 Q40 64 46 58" stroke="#211D1B" stroke-width="1.4" fill="none" stroke-linecap="round"/>
-                  <g transform="translate(64,12)" fill="#C9988F">
-                    <path d="M0 -5 L1 -1 L5 0 L1 1 L0 5 L-1 1 L-5 0 L-1 -1 Z"/>
-                  </g>
-                </g>
-              </svg>
+            <div class="project__cover project__cover--p3">
+              <img
+                src="assets/img/furlife-avatar-catalog.png"
+                data-i18n-alt="projects.p3.alt.catalog"
+                alt="Catálogo de avatares generados por el pipeline: perros y gatos en estilo Pixar/Dreamworks"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             <span class="project__index">P/03</span>
           </div>
@@ -616,39 +585,63 @@
           <div class="project__body">
             <h3 class="project__title">Furl Life — Avatar Matching</h3>
             <p class="project__desc" data-i18n-html="projects.p3.desc">
-              Aplicación <strong>Node.js / Express</strong> que identifica los
-              rasgos de una mascota a partir de una foto y devuelve un avatar
-              estilizado tipo <em>Pixar / Dreamworks</em> usando
-              <strong>Google Vision</strong> y <strong>Fireworks AI (FLUX.1)</strong>.
+              API REST en <strong>Node.js / Express</strong> que convierte la foto
+              real de una mascota en un avatar ilustrado tipo
+              <em>Pixar / Dreamworks</em>. Combina <strong>Google Cloud Vision</strong>
+              para detectar especie, raza, color y etapa de vida, un catálogo
+              local con <strong>matching difuso (Levenshtein)</strong> y un
+              fallback de generación con <strong>FLUX vía Pollinations.ai</strong>.
             </p>
 
             <details class="project__more">
               <summary data-i18n="projects.viewDetails">Ver detalles</summary>
               <div class="project__grid">
                 <div>
-                  <h4 data-i18n="projects.functions">Funciones</h4>
+                  <h4 data-i18n="projects.p3.pipeline">Pipeline de 5 etapas</h4>
                   <ul>
-                    <li data-i18n="projects.p3.fn.1">Reconocimiento de imagen con Vision AI (especie, raza, color, edad)</li>
-                    <li data-i18n="projects.p3.fn.2">Búsqueda inteligente en catálogo local de avatares</li>
-                    <li data-i18n="projects.p3.fn.3">Generación con FLUX.1 cuando no hay match</li>
-                    <li data-i18n="projects.p3.fn.4">Caché automático: el sistema "aprende" y se vuelve más rápido</li>
-                    <li data-i18n="projects.p3.fn.5">Gestión de subidas con Multer</li>
-                    <li data-i18n="projects.p3.fn.6">Preparado para desplegar en Oracle Cloud (OCI)</li>
+                    <li data-i18n-html="projects.p3.fn.1"><strong>Reconocimiento</strong> · Google Vision (LABEL_DETECTION) etiqueta la foto</li>
+                    <li data-i18n-html="projects.p3.fn.2"><strong>Normalización</strong> · diccionarios convierten labels a <code>{species, breed, color, stage}</code> con sinónimos y blocklist de contexto</li>
+                    <li data-i18n-html="projects.p3.fn.3"><strong>Match en catálogo</strong> · Levenshtein sobre <code>assets/avatars/</code>; si confianza &gt; 0.80 responde sin llamar a IA</li>
+                    <li data-i18n-html="projects.p3.fn.4"><strong>Fallback con IA</strong> · genera con FLUX vía Pollinations.ai usando un prompt dinámico estilo Pixar/Dreamworks</li>
+                    <li data-i18n-html="projects.p3.fn.5"><strong>Caché auto-poblante</strong> · doble escritura (historial + catálogo): el sistema se vuelve más rápido y barato con el uso</li>
                   </ul>
                 </div>
                 <div>
                   <h4 data-i18n="projects.objective">Objetivo</h4>
-                  <p data-i18n="projects.p3.objective">Entregar avatares estilizados que reflejen los rasgos reales de cada mascota, en segundos y sin intervención manual.</p>
-                  <h4 data-i18n="projects.challenges">Retos</h4>
-                  <p data-i18n="projects.p3.challenges">Conectar Vision AI con un catálogo dinámico, decidir cuándo reutilizar y cuándo generar con FLUX.1, y mantener la consistencia visual del estilo.</p>
+                  <p data-i18n="projects.p3.objective">Entregar avatares estilizados y consistentes que reflejen los rasgos reales de cada mascota en segundos, sin pagar un ilustrador ni intervención manual.</p>
+                  <h4 data-i18n="projects.decisions">Decisiones técnicas</h4>
+                  <p data-i18n-html="projects.p3.decisions">Resolución de raza por capas (exacta → substring → keywords → fallback a "criollo"), lógica dedicada para gatos naranjas (branding del producto), logs trazables por etapa (<code>[Vision]</code>, <code>[Match]</code>, <code>[Cache]</code>) y diseño para Oracle Cloud con load balancer y health check.</p>
                   <h4 data-i18n="projects.results">Resultados</h4>
-                  <p data-i18n="projects.p3.results">Pipeline end-to-end: foto → atributos → avatar. Cada generación enriquece el catálogo, reduciendo costos y tiempos de respuesta.</p>
+                  <p data-i18n="projects.p3.results">Endpoint <code>POST /api/avatar/match</code> devuelve <code>source</code>, <code>imageUrl</code>, <code>matchedAttributes</code> y <code>confidence</code>. Cada generación enriquece el catálogo, reduciendo costos y tiempos de respuesta futuros.</p>
                 </div>
+              </div>
+
+              <div class="project__gallery">
+                <figure>
+                  <img
+                    src="assets/img/furlife-avatar-catalog.png"
+                    data-i18n-alt="projects.p3.alt.catalog"
+                    alt="Catálogo auto-poblante en assets/avatars con avatares ya generados de perros y gatos"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <figcaption data-i18n-html="projects.p3.caption.1">Catálogo · doble escritura en <code>assets/avatars/</code></figcaption>
+                </figure>
+                <figure>
+                  <img
+                    src="assets/img/furlife-avatar-postman.png"
+                    data-i18n-alt="projects.p3.alt.postman"
+                    alt="Respuesta del endpoint en Postman: source, imageUrl, matchedAttributes y confidence"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <figcaption data-i18n-html="projects.p3.caption.2">Prueba real · respuesta del endpoint <code>/api/avatar/match</code></figcaption>
+                </figure>
               </div>
             </details>
 
             <ul class="project__tech">
-              <li>Node.js</li><li>Express</li><li>Google Vision AI</li><li>Fireworks AI</li><li>FLUX.1</li><li>Multer</li><li>Oracle Cloud</li>
+              <li>Node.js</li><li>Express</li><li>axios</li><li>multer</li><li>Google Vision API</li><li>FLUX</li><li>Pollinations.ai</li><li>dotenv</li><li>Oracle Cloud</li>
             </ul>
 
             <div class="project__cta">
