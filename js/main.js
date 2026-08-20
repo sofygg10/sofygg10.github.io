@@ -200,6 +200,20 @@
       'projects.p4.aria.github': 'Ver código de FurLife Luna en GitHub',
       'projects.p4.aria.docs': 'Ver documentación de FurLife Luna',
 
+      'projects.p5.desc': 'App de <strong>transporte público</strong> para Manizales: permite consultar las <strong>rutas de buses</strong> de la ciudad de forma clara y rápida. Disponible en <strong>App Store</strong>, <strong>Google Play</strong> y web.',
+      'projects.p5.roleTitle': 'Mi aporte',
+      'projects.p5.role.1': 'Investigación del sistema de transporte de la ciudad',
+      'projects.p5.role.2': 'Recolección y estructuración de datos de rutas',
+      'projects.p5.role.3': 'Desarrollo frontend de la interfaz',
+      'projects.p5.objective': 'Facilitar la movilidad en Manizales dando a las personas una forma sencilla de encontrar la ruta de bus que necesitan.',
+      'projects.p5.platformsTitle': 'Plataformas',
+      'projects.p5.platforms': 'Aplicación multiplataforma publicada en App Store y Google Play, con sitio web informativo.',
+      'projects.p5.tech.research': 'Investigación',
+      'projects.p5.tech.data': 'Datos de rutas',
+      'projects.p5.alt.logo': 'Logo de Punto Ruta Manizales: la Catedral de Manizales en dorado sobre fondo vino tinto',
+      'projects.p5.site': 'Sitio web',
+      'projects.p5.aria.site': 'Visitar el sitio web de Punto Ruta Manizales',
+
       // UPCOMING
       'upcoming.num': '04.b / En construcción',
       'upcoming.title': 'Próximos proyectos',
@@ -478,6 +492,20 @@
       'projects.p4.alt.postman': 'Postman webhook test showing the response with status, response and action_code',
       'projects.p4.aria.github': 'View FurLife Luna code on GitHub',
       'projects.p4.aria.docs': 'View FurLife Luna documentation',
+
+      'projects.p5.desc': '<strong>Public transport</strong> app for Manizales: quickly look up the city\'s <strong>bus routes</strong> in a clear, simple way. Available on <strong>App Store</strong>, <strong>Google Play</strong> and web.',
+      'projects.p5.roleTitle': 'My contribution',
+      'projects.p5.role.1': 'Research into the city\'s transport system',
+      'projects.p5.role.2': 'Collection and structuring of route data',
+      'projects.p5.role.3': 'Frontend development of the interface',
+      'projects.p5.objective': 'Make getting around Manizales easier by giving people a simple way to find the bus route they need.',
+      'projects.p5.platformsTitle': 'Platforms',
+      'projects.p5.platforms': 'Cross-platform app published on the App Store and Google Play, with an informational website.',
+      'projects.p5.tech.research': 'Research',
+      'projects.p5.tech.data': 'Route data',
+      'projects.p5.alt.logo': 'Punto Ruta Manizales logo: the Manizales Cathedral in gold on a maroon background',
+      'projects.p5.site': 'Website',
+      'projects.p5.aria.site': 'Visit the Punto Ruta Manizales website',
 
       // UPCOMING
       'upcoming.num': '04.b / In progress',

@@ -883,6 +883,19 @@ em { font-style: italic; color: var(--rosa-deep); }
   object-fit: cover;
 }
 
+/* Portada tipo icono de app (logo centrado sobre su propio fondo) */
+.project__cover--puntoruta {
+  display: grid;
+  place-items: center;
+  background: #931200;
+}
+.project__cover--puntoruta img {
+  width: auto;
+  height: 80%;
+  max-width: 60%;
+  object-fit: contain;
+}
+
 .project__index {
   position: absolute;
   top: 14px; left: 14px;
