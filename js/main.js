@@ -242,6 +242,21 @@
       'journey.6.title': 'Ingeniería en Sistemas y Telecomunicaciones',
       'journey.6.body': 'Octavo semestre. Profundizando en arquitectura de software, redes, datos e ingeniería para construir productos digitales sólidos y escalables.',
 
+      // CERTIFICACIONES
+      'certs.num': '05.b / Certificaciones',
+      'certs.title': 'Formación certificada y verificable.',
+      'certs.lead': 'Credenciales oficiales que respaldan mi aprendizaje con evidencia comprobable.',
+      'certs.view': 'Ver certificado',
+      'certs.verify': 'Verificar',
+      'certs.ia.badge': 'Verificable · auco.ai',
+      'certs.ia.title': 'Inteligencia Artificial · Nivel Básico',
+      'certs.ia.issuer': '<strong>MinTIC</strong> · Unión Temporal <strong>IU Training</strong> — Universidad de Antioquia, Universidad de Caldas y Ubicua Technology.',
+      'certs.ia.meta.hours': '159 horas',
+      'certs.ia.meta.date': 'Marzo 2026',
+      'certs.ia.meta.type': 'Bootcamp',
+      'certs.ia.aria.view': 'Ver certificado de Inteligencia Artificial en PDF',
+      'certs.ia.aria.verify': 'Verificar autenticidad del certificado en auco.ai',
+
       // CONTACT
       'contact.num': '06 / Contacto',
       'contact.title': 'Hablemos de tu próximo proyecto.',
@@ -505,6 +520,21 @@
       'journey.6.phase': 'In progress · Universidad de Manizales',
       'journey.6.title': 'Systems and Telecommunications Engineering',
       'journey.6.body': 'Eighth semester. Deepening into software architecture, networks, data and engineering to build solid, scalable digital products.',
+
+      // CERTIFICATIONS
+      'certs.num': '05.b / Certifications',
+      'certs.title': 'Certified, verifiable training.',
+      'certs.lead': 'Official credentials that back my learning with verifiable evidence.',
+      'certs.view': 'View certificate',
+      'certs.verify': 'Verify',
+      'certs.ia.badge': 'Verifiable · auco.ai',
+      'certs.ia.title': 'Artificial Intelligence · Basic Level',
+      'certs.ia.issuer': '<strong>MinTIC</strong> · <strong>IU Training</strong> consortium — Universidad de Antioquia, Universidad de Caldas &amp; Ubicua Technology.',
+      'certs.ia.meta.hours': '159 hours',
+      'certs.ia.meta.date': 'March 2026',
+      'certs.ia.meta.type': 'Bootcamp',
+      'certs.ia.aria.view': 'View Artificial Intelligence certificate (PDF)',
+      'certs.ia.aria.verify': 'Verify certificate authenticity on auco.ai',
 
       // CONTACT
       'contact.num': '06 / Contact',

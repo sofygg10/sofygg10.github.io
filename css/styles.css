@@ -1145,6 +1145,98 @@ em { font-style: italic; color: var(--rosa-deep); }
 
 
 /* ============================================================
+  11.b · CERTIFICACIONES
+   ============================================================ */
+.certs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 18px;
+}
+
+.cert-card {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background: var(--lino);
+  border: 1px solid var(--hair);
+  border-radius: var(--r-lg);
+  padding: 26px 24px;
+  transition: transform var(--t-base) var(--ease), box-shadow var(--t-base) var(--ease), border-color var(--t-base) var(--ease);
+}
+.cert-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--hair-strong);
+  box-shadow: var(--shadow-2);
+}
+
+.cert-card__seal { flex-shrink: 0; width: 66px; }
+.cert-card__seal svg { width: 66px; height: auto; }
+
+.cert-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+
+.cert-card__badge {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 7px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--lavanda-deep);
+  background: var(--lavanda-soft);
+  border-radius: var(--r-pill);
+  padding: 5px 11px;
+}
+
+.cert-card__title {
+  font-size: 23px;
+  line-height: 1.1;
+}
+.cert-card__issuer {
+  font-size: 14px;
+  color: var(--tinta-70);
+  margin: 0;
+  max-width: 48ch;
+}
+
+.cert-card__meta {
+  list-style: none;
+  padding: 0;
+  margin: 2px 0 4px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.cert-card__meta li {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+  padding: 5px 10px;
+  border: 1px solid var(--hair);
+  border-radius: var(--r-pill);
+  color: var(--tinta-70);
+  background: var(--lino-2);
+}
+
+.cert-card__cta {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+@media (max-width: 480px) {
+  .cert-card { flex-direction: column; gap: 14px; }
+}
+
+
+/* ============================================================
   12 · CONTACT
    ============================================================ */
 .contact {
