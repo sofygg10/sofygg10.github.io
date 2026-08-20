@@ -212,7 +212,9 @@
       'projects.p5.tech.data': 'Datos de rutas',
       'projects.p5.alt.logo': 'Logo de Punto Ruta Manizales: la Catedral de Manizales en dorado sobre fondo vino tinto',
       'projects.p5.site': 'Sitio web',
+      'projects.p5.appstore': 'App Store',
       'projects.p5.aria.site': 'Visitar el sitio web de Punto Ruta Manizales',
+      'projects.p5.aria.appstore': 'Descargar Punto Ruta en el App Store',
 
       // UPCOMING
       'upcoming.num': '04.b / En construcción',
@@ -505,7 +507,9 @@
       'projects.p5.tech.data': 'Route data',
       'projects.p5.alt.logo': 'Punto Ruta Manizales logo: the Manizales Cathedral in gold on a maroon background',
       'projects.p5.site': 'Website',
+      'projects.p5.appstore': 'App Store',
       'projects.p5.aria.site': 'Visit the Punto Ruta Manizales website',
+      'projects.p5.aria.appstore': 'Download Punto Ruta on the App Store',
 
       // UPCOMING
       'upcoming.num': '04.b / In progress',
